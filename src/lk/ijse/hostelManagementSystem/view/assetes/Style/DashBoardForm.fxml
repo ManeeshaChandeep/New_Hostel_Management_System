@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.view.assetes.Style.DashBoardFormController">
+   <children>
+      <Text layoutX="67.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to" wrappingWidth="139.33251953125" />
+      <Text layoutX="85.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24 Hostel" wrappingWidth="139.33251953125" />
+      <Text layoutX="293.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="login to your account" wrappingWidth="254.33251953125" />
+      <Text layoutX="293.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" wrappingWidth="152.33251953125" />
+      <Text layoutX="293.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="166.33251953125" />
+      <TextField layoutX="389.0" layoutY="185.0" />
+      <TextField layoutX="389.0" layoutY="227.0" />
+      <Button layoutX="497.0" layoutY="309.0" mnemonicParsing="false" text="login" />
+      <Button layoutX="67.0" layoutY="325.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</AnchorPane>
