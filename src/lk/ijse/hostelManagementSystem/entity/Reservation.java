@@ -1,12 +1,25 @@
 package lk.ijse.hostelManagementSystem.entity;
 
+import javax.persistence.*;
 import java.sql.Date;
 
+@Entity
 public class Reservation {
+    @Id
+    @Column(length = 10,name = "res_id")
     private String resID;
+
+    @Column(name = "date")
     private Date date;
+    @ManyToOne
+    @JoinColumn(name = "student_id",nullable = false)
     private Student student;
+
+    @ManyToOne
+    @JoinColumn(name = "room_type_id",nullable = false)
     private Room room;
+
+    @Column(name = "status")
     private String status;
 
     public Reservation() {

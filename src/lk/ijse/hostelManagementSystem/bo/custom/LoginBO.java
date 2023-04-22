@@ -2,9 +2,8 @@ package lk.ijse.hostelManagementSystem.bo.custom;
 
 import lk.ijse.hostelManagementSystem.bo.SuperBO;
 
-public interface UserBO extends SuperBO {
+public interface LoginBO extends SuperBO {
 }
-
 
 
 /*
@@ -16,13 +15,15 @@ import lk.ijse.hostelManagement.dto.UsersDTO;
 
 import java.util.List;
 
-public interface UsersBO extends SuperBO {
-    List<UsersDTO> loadAll() throws Exception;
+public interface LoginBO extends SuperBO {
     boolean saveUsers(UsersDTO usersDTO) throws Exception;
-    boolean updateUsers(UsersDTO usersDTO) throws Exception;
-    boolean deleteUsers(UsersDTO usersDTO) throws Exception;
 
-    boolean activateUser(String id) throws Exception;
+    boolean updateUsers(UsersDTO usersDTO) throws Exception;
+
+    UsersDTO getUsersDto(String userName) throws Exception;
+
+    List<UsersDTO> loadAll() throws Exception;
+
     String generateNextUserID() throws Exception;
 }
 

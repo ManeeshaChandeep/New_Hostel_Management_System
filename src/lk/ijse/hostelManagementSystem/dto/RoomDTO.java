@@ -3,26 +3,29 @@ package lk.ijse.hostelManagementSystem.dto;
 import lk.ijse.hostelManagementSystem.entity.Student;
 
 public class RoomDTO {
-    private Student id;
-     private String type;
+
+    private String id;
+    private String type;
     private String keyMoney;
-   private int qty;
+    private int qty;
+
+    //private List<ReservationDTO> reservationList;
 
     public RoomDTO() {
     }
 
-    public RoomDTO(Student id, String type, String keyMoney, int qty) {
+    public RoomDTO(String id, String type, String keyMoney, int qty) {
         this.id = id;
         this.type = type;
         this.keyMoney = keyMoney;
         this.qty = qty;
     }
 
-    public Student getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Student id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -53,7 +56,7 @@ public class RoomDTO {
     @Override
     public String toString() {
         return "RoomDTO{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", type='" + type + '\'' +
                 ", keyMoney='" + keyMoney + '\'' +
                 ", qty=" + qty +

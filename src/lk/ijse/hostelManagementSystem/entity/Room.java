@@ -1,28 +1,42 @@
 package lk.ijse.hostelManagementSystem.entity;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
 public class Room {
-    private Student id;
+
+    @Id
+    @Column(length = 10,name = "room_type_id")
+    private String id;
+
+    @Column(name = "type")
     private String type;
+
+    @Column(name = "key_money")
     private String keyMoney;
+
+    @Column(name = "Qty")
     private int qty;
+
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "room")
+    private List<Reservation> reservationList;
 
     public Room() {
     }
 
-    public Room(Student id, String type, String keyMoney, int qty) {
+    public Room(String id, String type, String keyMoney, int qty) {
         this.id = id;
         this.type = type;
         this.keyMoney = keyMoney;
         this.qty = qty;
     }
 
-
-
-    public Student getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Student id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -51,12 +65,13 @@ public class Room {
     }
 
     @Override
-    public String  toString() {
+    public String toString() {
         return "Room{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", type='" + type + '\'' +
                 ", keyMoney='" + keyMoney + '\'' +
                 ", qty=" + qty +
+                ", reservationList=" + reservationList +
                 '}';
     }
 }

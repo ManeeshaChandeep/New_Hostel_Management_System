@@ -1,4 +1,6 @@
 package lk.ijse.hostelManagementSystem.dao.custom;
 
-public interface UserDAO {
+import lk.ijse.hostelManagementSystem.dao.CrudDAO;
+
+public interface UserDAO extends CrudDAO {
 }

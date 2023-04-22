@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.view.assetes.Style.DashBoardFormController">
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.DashBoardFormController">
    <children>
       <Text layoutX="67.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to" wrappingWidth="139.33251953125" />
       <Text layoutX="85.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24 Hostel" wrappingWidth="139.33251953125" />

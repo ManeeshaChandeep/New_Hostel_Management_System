@@ -1,11 +1,31 @@
 package lk.ijse.hostelManagementSystem.entity;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
 public class Student {
+    @Id
+    @Column(length = 10,name = "studentID")
     private String id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "Address")
     private String address;
+
+    @Column(name = "contactNo")
     private String contactNo;
+
+    @Column(name = "dob")
     private String dob;
+
+    @Column(name = "gender")
+    private String gender;
+
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "student")
+    private List<Reservation> reservationList;
 
     public Student() {
     }
@@ -18,8 +38,6 @@ public class Student {
         this.dob = dob;
         this.gender = gender;
     }
-
-    private String gender;
 
     public String getId() {
         return id;
@@ -65,12 +83,9 @@ public class Student {
         return gender;
     }
 
-
-
     public void setGender(String gender) {
         this.gender = gender;
     }
-
 
     @Override
     public String toString() {

@@ -1,21 +1,24 @@
 package lk.ijse.hostelManagementSystem.dto;
 
 public class StudentDTO {
-     private String id;
-     private String name;
-     private String address;
-     private String contactNo;
-     private String dob;
+
+    private String id;
+    private String name;
+    private String address;
+    private String contactNo;
+    private String dob;
+    private String gender;
 
     public StudentDTO() {
     }
 
-    public StudentDTO(String id, String name, String address, String contactNo, String dob) {
+    public StudentDTO(String id, String name, String address, String contactNo, String dob, String gender) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.contactNo = contactNo;
         this.dob = dob;
+        this.gender = gender;
     }
 
     public String getId() {
@@ -58,6 +61,14 @@ public class StudentDTO {
         this.dob = dob;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "StudentDTO{" +
@@ -66,6 +77,7 @@ public class StudentDTO {
                 ", address='" + address + '\'' +
                 ", contactNo='" + contactNo + '\'' +
                 ", dob='" + dob + '\'' +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }
